@@ -1,28 +1,28 @@
-# README #
+========== readme.txt =============================
 
 Leia atentamente este ficheiro antes de iniciar o seu trabalho nas aulas PL de ARQCP.
 
-# Regras: #
+Regras:
 
-* Cada grupo deve ter o seu repositorio.
+a) Cada grupo deve ter o seu repositorio.
 
-* O nome do repositorio no Bitbucket segue o seguinte padrao: ARQCP2021tttGxx
+b) O nome do repositorio no Bitbucket segue o seguinte padrao: ARQCP2021tttGxx
 - ttt deve ser substituido pelo nome da turma. Ex: 2DA
-- xx deve ser substituido pelo n˙mero do grupo (sempre com 2 digitos). Ex: G01
+- xx deve ser substituido pelo n√∫mero do grupo (sempre com 2 digitos). Ex: G01
 - Exemplo: ARQCP20212DAG01
 
-* Estrutura de diretorios na raiz do repositorio.
+c) Estrutura de diretorios na raiz do repositorio.
 
-A estrutura de diretorios do primeiro nivel j· est· criada. 
+A estrutura de diretorios do primeiro nivel j√° est√° criada. 
 Existe um diretorio para cada modulo das aulas PL. Os exercicios de cada modulo devem ser colocados no diretorio correspondente. 
 
-* Organizacao do diretorio de cada modulo.
+d) Organizacao do diretorio de cada modulo.
 
 Dentro do diretorio de cada modulo deve ser criado um subdiretorio para cada exercicio. O nome desse subdiretorio deve iniciar pelas letras "ex" e ser seguido do numero que identifica o exercicio. Exemplo: "ex01"
 
-* Ficheiros
+e) Ficheiros
 
-O ficheiro com a funcao main deve chamar-se "main.c" e nao deve ter nenhuma das restantes funcoes pedidas no enunciado de cada exercicio. 
+O ficheiro com a funcao main deve chamar-se ‚Äúmain.c‚Äù e nao deve ter nenhuma das restantes funcoes pedidas no enunciado de cada exercicio. 
 
 O nome dos restantes ficheiros nao deve conter espacos. 
   
