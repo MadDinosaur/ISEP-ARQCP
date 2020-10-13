@@ -1,0 +1,27 @@
+# Makefile exercicio 9
+
+# Variáveis
+
+INCLUDES = header.h
+SOURCES = verificar.c basecomparar.c ex09.c
+OBJFILES = verificar.o basecomparar.o ex09.o
+EXEC = ex09
+
+# Regra de subfixos
+
+.SUBFIXES : .c .o
+
+.c .o:
+
+	gcc -Wall -g -c $<
+	
+${EXEC}: ${OBJFILES}
+	gcc -Wall -g -o ${EXEC} ${OBJFILES}
+	
+${OBJFILES}: ${SOURCES} ${INCLUDES}
+
+run: ${EXEC}
+	./${EXEC}
+	
+clean: 
+	rm -f ${OBJFILES} ${EXEC}

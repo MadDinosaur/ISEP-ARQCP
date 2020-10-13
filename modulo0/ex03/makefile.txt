@@ -1,0 +1,16 @@
+# Makefile do exercício 3
+
+ex03: fillarray.o main.o
+	gcc -g -Wall fillarray.o main.o -o ex03
+	
+fillarray.o: fillarray.c
+	gcc -g -Wall -c fillarray.c -o fillarray.o
+	
+main.o: main.c
+	gcc -g -Wall -c main.c -o main.o
+	
+clean:
+	rm -f *.o ex03
+	
+run: ex03
+	./ex03

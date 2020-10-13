@@ -1,0 +1,16 @@
+# Makefile do exercício 5
+
+ex05: stringtoint.o main.o
+	gcc stringtoint.o main.o -o ex05
+	
+stringtoint.o: stringtoint.c
+	gcc -g -Wall -c stringtoint.c -o stringtoint.o
+	
+main.o: main.c
+	gcc -g -Wall -c main.c -o main.o
+	
+clean: 
+	rm -f *.o ex05
+	
+run: ex05
+	./ex05
