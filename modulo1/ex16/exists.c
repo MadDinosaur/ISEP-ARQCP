@@ -3,8 +3,6 @@
 
 char* recursive_where_exists(char* str1, char* str2, char* starting_pos) {
 	if (*str1 == 0) {
-		int dif = str1 - starting_pos;
-		char* dif2 = str2 - dif;
 		return str2 - (str1 - starting_pos);
 	}
 	
@@ -20,6 +18,11 @@ char* recursive_where_exists(char* str1, char* str2, char* starting_pos) {
 }
 
 char* where_exists(char* str1, char* str2) {
+	//Check for null entry
+	if (*str1 == 0) {
+		return 0;
+	}
+	
 	char* p = recursive_where_exists(str1, str2, str1);
 	return p;
 }

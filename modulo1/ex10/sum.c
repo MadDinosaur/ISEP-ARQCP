@@ -3,9 +3,9 @@ int odd_sum(int* p) {
 	int sum = 0;
 	int i;
 	
-	for (i = 1; i < size; i++) {
+	for (i = 0; i < size; i++) {
 		p++;
-		if (*p % 2 == 1) {sum += *p;}
+		if (*p % 2 != 0) {sum += *p;}
 	}
 	
 	return sum;
