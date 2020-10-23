@@ -13,13 +13,13 @@ int palindrome(char *str)
 	
 	while(ptr2 > ptr1)
 	{
-		if (!isalpha(*ptr2))
+		if (!isalnum(*ptr2))
 		{
 			ptr2--;
 			continue;
 		}
 		
-		if (!isalpha(*ptr1))
+		if (!isalnum(*ptr1))
 		{
 			ptr1++;
 			continue;
@@ -34,6 +34,5 @@ int palindrome(char *str)
 		ptr2--;
 	}
 	
-	return 1;
-			
+	return 1;		
 }

@@ -1,34 +1,32 @@
 #include <stdio.h>
 #include "sort_without_reps.h"
-#include "sort_copy.h"
 
-int main()
-{
-	int vec[]={2,1,1,1,1,1,1,1,1};
-	
-	int comprimento = sizeof(vec)/sizeof(vec[0]);
-	
-	int vec2[comprimento];
-	
-	int i=0;
-	
-	int vezes = 0;
-		
-	vezes = sort_without_reps(vec, comprimento, vec2);
-	
-	printf("Numero de elementos que foram inseridos no novo array: %d \n", vezes);
-	
-	printf ("Resultado do array final: \n");
-	
-	for(i=0;i<comprimento;i++)
-	{
-		if(vec2[i] != 0)
-		{
-			printf("%d ",vec2[i]);
-		}
-	}
-			
-	printf("\n");
-	
-	return 0;
+int main(){
+    int vec[10]= {2,1,3,2,4,3,5,4,5,6};
+    int vec2[10];
+	int *ptr2 = vec2;
+
+    int x = sort_without_reps(vec, 10, vec2);
+    printf("\nNº de elementos do array: %d\n", x);
+    
+    
+    //Print do array!!
+    printf("Array final: {");
+    int max=x;
+    while(x!=0){
+        if(x==max){
+            printf("%d",*ptr2);
+            ptr2++;
+            x--;
+            continue;
+        }
+        if(*ptr2!=0){
+            printf(",%d",*ptr2);
+        }
+        ptr2++;
+        x--;
+    }
+    printf("}\n\n");
+    
+    return 0;
 }

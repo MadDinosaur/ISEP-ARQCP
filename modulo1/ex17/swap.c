@@ -1,4 +1,4 @@
-void swap(int *vec1, int size, int *vec2)
+void swap(int *vec1,int *vec2,int size)
 {
 	int temp = 0;
 	int i= 0;

@@ -4,7 +4,7 @@
 int main()
 {
 	int vec1[] = {1,2,3,4};
-	int vec2[] = {5,6,7,8,9,10};
+	int vec2[] = {5,6,7,8};
 	int size1;
 	int size2;
 	
@@ -31,7 +31,7 @@ int main()
 		
 	if (size1 == size2)
 	{
-		swap(vec1,size1,vec2);
+		swap(vec1,vec2,size1);
 		
 		printf("Vetores trocados: \n");
 		
@@ -54,7 +54,6 @@ int main()
 	{
 		printf("Os arrays não tem o mesmo tamanho. Impossível de trocar o seu conteúdo \n");
 	}
-	
 		
 	return 0;	
 }
