@@ -13,12 +13,7 @@ int main()
 	int n = 0;
 	
 	populate(vec,num,limit);
-	
-	for(j = 0; j<num;j++)
-	{
-		printf("%d ", vec[j]);
-	}
-		
+			
 	for (i=0; i< num-2; i++)
 	{
 		valor = check(vec[i],vec[i+1],vec[i+2]);
