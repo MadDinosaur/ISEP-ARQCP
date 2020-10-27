@@ -21,7 +21,7 @@ int main()
 		if (valor == 1)
 		{
 			n++;	
-			inc_sets;
+			inc_sets();
 		}
 	
 	}
