@@ -6,18 +6,18 @@
 	.global swapBytes
 	
 swapBytes:
-	# prologue
-	pushw %bp 
-	movw %sp, %bp
 
-	movb s, %al # 8 bits mais significativos 
+	# prologue
+	pushl %ebp 
+	movl %esp, %ebp
 	
-	movb s, %ah # 8 bits menos significativos
+	movl $0, %eax
+	movw s, %ax
 	
 	xchg %ah,%al
 	
 	#epilogue
-	movw %bp, %sp
-	popw %bp
+	movl %ebp, %esp
+	popl %ebp
 	ret
 	

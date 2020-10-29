@@ -8,7 +8,7 @@ int main()
 	printf("Insira o valor do short: \n");
 	scanf ("%hd",&s);
 	
-	swapBytes();
+	s = swapBytes();
 	
 	printf("Novo valor: %hd \n", s);
 	
