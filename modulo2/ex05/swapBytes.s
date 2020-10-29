@@ -7,15 +7,17 @@
 	
 swapBytes:
 	# prologue
-	pushl %ebp 
-	movl %esp, %ebp
+	pushw %bp 
+	movw %sp, %bp
 
-	movl s, %eax
-	rol %eax, 8
-	movl %eax, s
+	movb s, %al # 8 bits mais significativos 
+	
+	movb s, %ah # 8 bits menos significativos
+	
+	xchg %ah,%al
 	
 	#epilogue
-	movl %ebp, %esp
-	popl %ebp
+	movw %bp, %sp
+	popw %bp
 	ret
 	
