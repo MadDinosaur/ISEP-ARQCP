@@ -31,14 +31,14 @@ compute:
 	
 	adcl $0,%edx
 	
-	#epilogue
-	movl %ebp, %esp
-	popl %ebp
-	ret
+	jmp fim
 	
 verificar_zero:
 
 	movl $0, %eax
+	jmp fim
+
+fim:
 
 	#epilogue
 	movl %ebp, %esp
