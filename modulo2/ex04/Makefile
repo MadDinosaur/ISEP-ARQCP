@@ -1,30 +1,14 @@
-# Makefile
+sum_v3: main.o sum_v3.o
+	gcc -m32 -g -Wall main.o sum_v3.o -o sum_v3
 
-#Variaveis
-
-INCLUDES = asm.h
-SOURCES = main.c asm.s
-OBJFILES = asm.o main.o
-EXEC = main
-
-#Suffix rules
-.SUFFIXES : .c .o
-
-.c.o:
-	gcc -m32 -Wall -g -c $<
-
-.SUFFIXES : .s .o
-
-.s.o:
-	gcc -m32 -Wall -g -c $<
+main.o: main.c sum_v3.h
+	gcc -m32 -g -Wall -c main.c
 	
-${EXEC}: ${OBJFILES}
-	gcc -m32 -Wall -g -o ${EXEC} ${OBJFILES}
+sum_v3.o: sum_v3.s
+	gcc -m32 -g -Wall -c sum_v3.s
 	
-${OBJFILES}: ${SOURCES} ${INCLUDES}
-
-run: ${EXEC}
-	./${EXEC}
+run:
+	./sum_v3
 	
 clean:
-	rm -f ${OBJFILES} ${EXEC}
+	rm -f sum_v3.o main.o sum_v3
