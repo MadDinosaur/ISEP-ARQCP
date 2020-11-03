@@ -1,6 +1,7 @@
 .section .data
 	
-.global numero9	
+.global numero9
+.equ CONST, -1
 	
 .section .text
 	.global modulo
@@ -13,9 +14,17 @@ modulo:
 
 	movl numero9,%eax
 	cdq
-	xor %eax,%edx
-	sub %eax,%edx
 	
+	
+	cmp $0, %eax
+	jl se_for_menor
+	
+	jmp fim
+
+se_for_menor:
+	imull $CONST,%eax
+	
+fim:	
 	#epilogue
 	movl %ebp, %esp
 	popl %ebp
