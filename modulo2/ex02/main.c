@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "asm.h"
+#include "sum.h"
 
 int op1=0, op2=0,res=0;
 

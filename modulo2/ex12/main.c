@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "asm.h"
+#include "isMultiple.h"
 
 int A=0, B=0;
 

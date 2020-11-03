@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "asm.h"
+#include "crossSumBytes.h"
 
 int main(void) {
 	printf("%hu %x",crossSumBytes(), crossSumBytes());

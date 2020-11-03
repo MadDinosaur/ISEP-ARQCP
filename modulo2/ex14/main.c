@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "asm.h"
+#include "getArea.h"
 
 int main(void) {
 	printf("Valor base:");
