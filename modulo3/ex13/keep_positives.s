@@ -3,9 +3,9 @@
 	.global num
 	
 .section .text
-	.global vec_greater20
+	.global keep_positives
 	
-vec_greater20:
+keep_positives:
 
 	# prologue
 	pushl %ebp 
@@ -16,37 +16,30 @@ vec_greater20:
 	movl $0,%eax
 	movl ptrvec,%ecx
 	movl num, %ebx
+	
 	cmpl $0, %ebx
-	jle end
+	je end
 
 loop:
+	
 	cmpl num,%edx
 	je end
 	
-	cmpl $0,4(%ecx)
-	je next_part
-	jg increment
+	cmpl $0,(%ecx)
+	jl next_part
 	
+	addl $4, %ecx
 	incl %edx
-	addl $8, %ecx
 	
 	jmp loop
 	
 next_part:
 
-	cmpl $20,(%ecx)
-	jg increment
+	movl %edx,(%ecx)
 	
 	incl %edx
-	addl $8, %ecx
+	addl $4, %ecx
 	
-	jmp loop
-	
-increment:
-
-	incl %eax
-	incl %edx
-	addl $8, %ecx
 	jmp loop
 
 end:

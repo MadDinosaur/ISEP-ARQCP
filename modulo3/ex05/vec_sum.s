@@ -4,6 +4,7 @@
     
 .section .text
     .global vec_sum
+	
 vec_sum:
     # prologue
     pushl %ebp # save previous stack frame pointer
