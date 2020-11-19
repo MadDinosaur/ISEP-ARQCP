@@ -1,29 +1,14 @@
-# Makefile do exercício 01 do módulo 3
+zero_count: main.o zero_count.o
+	gcc -m32 -g -Wall main.o zero_count.o -o zero_count
 
-# Variáveis:
-INCLUDES = zero_count.h
-SOURCES = zero_count.s main.c
-OBJFILES = zero_count.o main.o
-EXEC = ex01
-
-#Suffix rules
-.SUFFIXES : .c .o
-
-.c.o: 
-	gcc -Wall -g -c $<
+main.o: main.c zero_count.h
+	gcc -m32 -g -Wall -c main.c
 	
-.SUFFIXES : .s .o	
+zero_count.o: zero_count.s
+	gcc -m32 -g -Wall -c zero_count.s
 	
-.s.o:
-	gcc -Wall -g -c $<
+run:
+	./zero_count
 	
-${EXEC}: ${OBJFILES}
-	gcc -Wall -g -o ${EXEC} ${OBJFILES}
-	
-${OBJFILES}: ${SOURCES} ${INCLUDES}
-
-run: ${EXEC}
-	./${EXEC}
-	
-clean: 
-	rm -f ${OBJFILES} ${EXEC}
+clean:
+	rm -f zero_count.o main.o zero_count
