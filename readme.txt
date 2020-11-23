@@ -30,3 +30,5 @@ O nome dos restantes ficheiros nao deve conter espacos.
 Submission closed for class modulo1
 
 Submission closed for class modulo2
+
+Submission closed for class modulo3
